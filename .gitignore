@@ -29,6 +29,8 @@ hs_err_pid*
 .idea/**/shelf
 .idea/**/jarRepositories.xml
 .idea/**/misc.xml
+.idea/**/.name
+.idea/**/modules/
 .idea/**/compiler.xml
 # Generated files
 .idea/**/contentModel.xml
@@ -70,4 +72,3 @@ out/
 
 # Editor-based Rest Client
 .idea/httpRequests
-

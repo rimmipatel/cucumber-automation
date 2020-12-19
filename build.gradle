@@ -5,10 +5,22 @@ plugins {
 group 'org.example'
 version '1.0-SNAPSHOT'
 
+test {
+    useTestNG()
+    scanForTestClasses = false
+}
+
 repositories {
     mavenCentral()
 }
 
 dependencies {
-
+    testImplementation("org.testng:testng:7.3.0") {
+        exclude group: 'com.google.guava'
+    }
+    testImplementation "org.seleniumhq.selenium:selenium-java:3.141.59"
+    testImplementation "io.github.bonigarcia:webdrivermanager:4.2.2"
+    testImplementation "io.cucumber:cucumber-java:6.8.1"
+    testImplementation "io.cucumber:cucumber-testng:6.8.1"
+    testImplementation "io.cucumber:cucumber-picocontainer:6.8.1"
 }
