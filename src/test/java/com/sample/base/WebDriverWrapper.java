@@ -1,8 +1,6 @@
 package com.sample.base;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.picocontainer.Disposable;
 
 import java.util.concurrent.TimeUnit;
@@ -15,13 +13,14 @@ import java.util.concurrent.TimeUnit;
 public class WebDriverWrapper implements Disposable {
 
     public final WebDriver driver;
+    public final InputArguments inputArguments;
 
     public WebDriverWrapper() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        inputArguments = InputArguments.create();
+        driver = WebDriverFactory.create(inputArguments.browserType);
         driver.manage().timeouts().implicitlyWait(Timeout.DEFAULT_SECONDS, TimeUnit.SECONDS);
         driver.manage().window().maximize();
-        driver.get("https://www.komoot.com/");
+        driver.get(inputArguments.url);
     }
 
     @Override
