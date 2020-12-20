@@ -17,8 +17,8 @@ public class SignInSteps {
         signInPage.signInPageShouldBeVisible();
     }
 
-    @When("user enters valid email: {string} on sign in page")
-    public void userEntersValidEmailOnSignInPage(String email) {
+    @When("user enters email: {string} on sign in page")
+    public void userEntersEmailOnSignInPage(String email) {
         signInPage.enterEmail(email);
     }
 
@@ -27,8 +27,8 @@ public class SignInSteps {
         signInPage.clickContinueWithEmail();
     }
 
-    @And("user enters valid password: {string} on sign in page")
-    public void userEntersValidPasswordOnSignInPage(String pwd) {
+    @And("user enters password: {string} on sign in page")
+    public void userEntersPasswordOnSignInPage(String pwd) {
         signInPage.enterPassword(pwd);
     }
 
@@ -40,5 +40,10 @@ public class SignInSteps {
     @And("user clicks forgot your password on sign in page")
     public void userClicksForgotYourPasswordOnSignInPage() {
         signInPage.clickForgotYourPassword();
+    }
+
+    @Then("user should see error message for invalid credential")
+    public void userShouldSeeErrorMessageForInvalidCredential() {
+        signInPage.errorMessageForInvalidCredentialShouldBeVisible();
     }
 }

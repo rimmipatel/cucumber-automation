@@ -19,4 +19,7 @@ public class SignInPageElements {
 
     @FindBy(xpath = "//*[contains(text(),'Forgot your password?')]")
     WebElement forgotYourPassword;
+
+    @FindBy(xpath = "//p[contains(text(),'Please verify your email and password and try again.')]")
+    WebElement errorMessage;
 }

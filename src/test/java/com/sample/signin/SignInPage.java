@@ -34,6 +34,11 @@ public class SignInPage extends Page {
         elements.logIn.click();
     }
 
+    public void errorMessageForInvalidCredentialShouldBeVisible(){
+        waitUntilVisible(elements.errorMessage);
+        shouldBeVisible(elements.errorMessage);
+    }
+
     public void clickForgotYourPassword() {
         elements.forgotYourPassword.click();
     }
