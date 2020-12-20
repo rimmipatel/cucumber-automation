@@ -5,6 +5,9 @@ import org.openqa.selenium.support.FindBy;
 
 public class HomePageElements {
 
-    @FindBy(css = ".c-page-index__indicator--user")
+    @FindBy(css = ".icon-action-more")
     WebElement topMenuUserBar;
+
+    @FindBy(xpath = "//a[contains(text(),'Log Out')]")
+    WebElement logOut;
 }

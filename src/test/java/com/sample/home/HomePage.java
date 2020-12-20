@@ -16,5 +16,7 @@ public class HomePage extends Page {
     public void homePageShouldBeVisible() {
         waitUntilVisible(elements.topMenuUserBar);
         shouldBeVisible(elements.topMenuUserBar);
+        elements.topMenuUserBar.click();
+        waitUntilVisible(elements.logOut);
     }
 }
