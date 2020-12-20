@@ -16,4 +16,7 @@ public class SignInPageElements {
 
     @FindBy(xpath = "//button[contains(@type,'submit')] ")
     WebElement logIn;
+
+    @FindBy(xpath = "//*[contains(text(),'Forgot your password?')]")
+    WebElement forgotYourPassword;
 }

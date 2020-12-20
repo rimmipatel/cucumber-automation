@@ -3,8 +3,6 @@ package com.sample.signin;
 import com.sample.base.Page;
 import com.sample.base.WebDriverWrapper;
 
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.MatcherAssert.assertThat;
 import static org.openqa.selenium.support.PageFactory.initElements;
 
 public class SignInPage extends Page {
@@ -17,10 +15,10 @@ public class SignInPage extends Page {
 
     public void signInPageShouldBeVisible() {
         waitUntilVisible(elements.continueWithEmail);
-        assertThat(elements.continueWithEmail.isDisplayed(), equalTo(true));
+        shouldBeVisible(elements.continueWithEmail);
     }
 
-    public void enterEmailID(String emailId) {
+    public void enterEmail(String emailId) {
         elements.emailAddress.sendKeys(emailId);
     }
 
@@ -34,5 +32,9 @@ public class SignInPage extends Page {
 
     public void clickLogIn() {
         elements.logIn.click();
+    }
+
+    public void clickForgotYourPassword() {
+        elements.forgotYourPassword.click();
     }
 }

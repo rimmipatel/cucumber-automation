@@ -12,8 +12,8 @@ public class MainPageSteps {
         this.mainPage = mainPage;
     }
 
-    @Given("user is on landing page")
-    public void userIsOnLandingPage() {
+    @Given("user is on main page")
+    public void userIsOnMainPage() {
         mainPage.openMainPage();
     }
 

@@ -3,8 +3,6 @@ package com.sample.home;
 import com.sample.base.Page;
 import com.sample.base.WebDriverWrapper;
 
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.MatcherAssert.assertThat;
 import static org.openqa.selenium.support.PageFactory.initElements;
 
 public class HomePage extends Page {
@@ -17,6 +15,6 @@ public class HomePage extends Page {
 
     public void homePageShouldBeVisible() {
         waitUntilVisible(elements.topMenuUserBar);
-        assertThat(elements.topMenuUserBar.isDisplayed(), equalTo(true));
+        shouldBeVisible(elements.topMenuUserBar);
     }
 }

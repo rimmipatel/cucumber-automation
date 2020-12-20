@@ -10,7 +10,6 @@ public class SignInSteps {
 
     public SignInSteps(SignInPage signInPage) {
         this.signInPage = signInPage;
-
     }
 
     @Then("user should see sign in page")
@@ -18,10 +17,9 @@ public class SignInSteps {
         signInPage.signInPageShouldBeVisible();
     }
 
-
-    @When("user enters email: {string} on sign in page")
-    public void userEntersEmailOnSignInPage(String emailId) {
-        signInPage.enterEmailID(emailId);
+    @When("user enters valid email: {string} on sign in page")
+    public void userEntersValidEmailOnSignInPage(String email) {
+        signInPage.enterEmail(email);
     }
 
     @And("user clicks on continue with email button on sign in page")
@@ -29,13 +27,18 @@ public class SignInSteps {
         signInPage.clickContinueWithEmail();
     }
 
-    @And("user enters password: {string} on sign in page")
-    public void userEntersPasswordOnSignInPage(String pwd) {
+    @And("user enters valid password: {string} on sign in page")
+    public void userEntersValidPasswordOnSignInPage(String pwd) {
         signInPage.enterPassword(pwd);
     }
 
     @And("user clicks on log in button on sign in page")
     public void userClicksOnLogInButtonOnSignInPage() {
         signInPage.clickLogIn();
+    }
+
+    @And("user clicks forgot your password on sign in page")
+    public void userClicksForgotYourPasswordOnSignInPage() {
+        signInPage.clickForgotYourPassword();
     }
 }
