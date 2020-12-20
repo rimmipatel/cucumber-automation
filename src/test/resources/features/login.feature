@@ -2,6 +2,7 @@ Feature: Sign up and login functionality
 
   Background:
     Given user is on landing page
+    And user accepts privacy policy
 
   Scenario Outline: Successful log in with valid credential
     When user clicks sign up or log in button
@@ -13,4 +14,4 @@ Feature: Sign up and login functionality
     Then user should see home page
     Examples:
       | emailId          | pwd      |
-      | "rp15@gmail.com" | "123456" |
+      | "testuser@yopmail.com" | "123456" |
