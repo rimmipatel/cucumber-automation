@@ -9,7 +9,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class WebDriverFactory {
 
-    public static WebDriver create(BrowserType browserType){
+    public static WebDriver create(BrowserType browserType) {
         switch (browserType) {
             case CHROME:
                 WebDriverManager.chromedriver().setup();

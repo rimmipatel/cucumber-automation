@@ -20,7 +20,6 @@ public class WebDriverWrapper implements Disposable {
         driver = WebDriverFactory.create(inputArguments.browserType);
         driver.manage().timeouts().implicitlyWait(Timeout.DEFAULT_SECONDS, TimeUnit.SECONDS);
         driver.manage().window().maximize();
-        driver.get(inputArguments.url);
     }
 
     @Override
