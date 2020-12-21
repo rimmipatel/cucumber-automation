@@ -14,7 +14,6 @@ public class SignInPage extends Page {
     }
 
     public void signInPageShouldBeVisible() {
-        waitUntilVisible(elements.continueWithEmail);
         shouldBeVisible(elements.continueWithEmail);
     }
 
@@ -23,7 +22,7 @@ public class SignInPage extends Page {
     }
 
     public void clickContinueWithEmail() {
-        elements.continueWithEmail.click();
+        click(elements.continueWithEmail);
     }
 
     public void enterPassword(String pwd) {
@@ -31,15 +30,14 @@ public class SignInPage extends Page {
     }
 
     public void clickLogIn() {
-        elements.logIn.click();
+        click(elements.logIn);
     }
 
-    public void errorMessageForInvalidCredentialShouldBeVisible(){
-        waitUntilVisible(elements.errorMessage);
+    public void errorMessageForInvalidCredentialShouldBeVisible() {
         shouldBeVisible(elements.errorMessage);
     }
 
     public void clickForgotYourPassword() {
-        elements.forgotYourPassword.click();
+        click(elements.forgotYourPassword);
     }
 }

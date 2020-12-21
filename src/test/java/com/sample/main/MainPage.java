@@ -3,8 +3,6 @@ package com.sample.main;
 import com.sample.base.Page;
 import com.sample.base.WebDriverWrapper;
 
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.MatcherAssert.assertThat;
 import static org.openqa.selenium.support.PageFactory.initElements;
 
 public class MainPage extends Page {
@@ -17,16 +15,14 @@ public class MainPage extends Page {
 
     public void openMainPage() {
         wrapper.driver.get(wrapper.inputArguments.url);
-        assertThat(elements.signUpOrLogIn.isDisplayed(), equalTo(true));
+        shouldBeVisible(elements.signUpOrLogIn);
     }
 
     public void acceptPrivacyPolicy() {
-        waitUntilClickable(elements.acceptAll);
-        elements.acceptAll.click();
+        click(elements.acceptAll);
     }
 
     public void clickSignUpOrLogIn() {
-        waitUntilClickable(elements.signUpOrLogIn);
-        elements.signUpOrLogIn.click();
+        click(elements.signUpOrLogIn);
     }
 }

@@ -22,7 +22,7 @@ public class ResetPasswordPage extends Page {
     }
 
     public void clickSendNewPassword() {
-        elements.sendNewPassword.click();
+        click(elements.sendNewPassword);
     }
 
     public void successfulPasswordResetMessageShouldBeVisible() {
