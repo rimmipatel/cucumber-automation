@@ -53,7 +53,7 @@ GROUP BY e.department_id
 ```
 
 
-# Queries for creating tables and inserting vales
+# Queries for creating tables and inserting values
 
 ```sql
 CREATE TABLE department (
