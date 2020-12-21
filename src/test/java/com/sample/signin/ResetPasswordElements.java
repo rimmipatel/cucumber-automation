@@ -8,7 +8,7 @@ public class ResetPasswordElements {
     @FindBy(xpath = "//*[contains(text(),'Send New Password')]")
     WebElement sendNewPassword;
 
-    @FindBy (id="email")
+    @FindBy(id = "email")
     WebElement email;
 
     @FindBy(xpath = "//*[contains(text(),'Your Password Has Been Reset')]")

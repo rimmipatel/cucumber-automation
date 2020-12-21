@@ -14,8 +14,28 @@ public class HomePage extends Page {
     }
 
     public void homePageShouldBeVisible() {
-        shouldBeVisible(elements.topMenuUserBar);
-        click(elements.topMenuUserBar);
+        shouldBeVisible(elements.moreMenu);
+        click(elements.moreMenu);
         shouldBeVisible(elements.logOut);
+    }
+
+    public void clickSettings() {
+        click(elements.settings);
+    }
+
+    public void clickMoreMenu() {
+        click(elements.moreMenu);
+    }
+
+    public void clickProfileName() {
+        click(elements.profileName);
+    }
+
+    public void clickYourProfile() {
+        click(elements.yourProfile);
+    }
+
+    public void clickHomeLogo() {
+        click(elements.homeLogo);
     }
 }

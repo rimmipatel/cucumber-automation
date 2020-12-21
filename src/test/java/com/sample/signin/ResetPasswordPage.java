@@ -18,7 +18,7 @@ public class ResetPasswordPage extends Page {
     }
 
     public void enterEmail(String email) {
-        elements.email.sendKeys(email);
+        sendKeys(elements.email, email);
     }
 
     public void clickSendNewPassword() {

@@ -18,7 +18,7 @@ public class SignInPage extends Page {
     }
 
     public void enterEmail(String emailId) {
-        elements.emailAddress.sendKeys(emailId);
+        sendKeys(elements.emailAddress, emailId);
     }
 
     public void clickContinueWithEmail() {
@@ -26,7 +26,7 @@ public class SignInPage extends Page {
     }
 
     public void enterPassword(String pwd) {
-        elements.password.sendKeys(pwd);
+        sendKeys(elements.password, pwd);
     }
 
     public void clickLogIn() {

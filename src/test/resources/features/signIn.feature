@@ -25,7 +25,7 @@ Feature: Sign up and login functionality
     And user clicks on log in button on sign in page
     Then user should see error message for invalid credential
     Examples:
-      | email                  | pwd      |
+      | email                  | pwd    |
       | "testuser@yopmail.com" | "1234" |
 
   Scenario Outline: Forgot password
@@ -41,5 +41,3 @@ Feature: Sign up and login functionality
     Examples:
       | email                   |
       | "testuser1@yopmail.com" |
-
-
