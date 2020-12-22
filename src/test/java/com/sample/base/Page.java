@@ -44,4 +44,13 @@ public abstract class Page {
         WebElement refreshedElement = wait.until(refreshed(elementToBeClickable(element)));
         refreshedElement.clear();
     }
+
+    // Avoid using this method as much as possible
+    protected  void waitFor(int milliseconds){
+        try {
+            Thread.sleep(milliseconds);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 }

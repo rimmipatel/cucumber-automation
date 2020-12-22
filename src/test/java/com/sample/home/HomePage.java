@@ -1,6 +1,7 @@
 package com.sample.home;
 
 import com.sample.base.Page;
+import com.sample.base.Timeout;
 import com.sample.base.WebDriverWrapper;
 
 import static org.openqa.selenium.support.PageFactory.initElements;
@@ -15,15 +16,17 @@ public class HomePage extends Page {
 
     public void homePageShouldBeVisible() {
         shouldBeVisible(elements.moreMenu);
-        click(elements.moreMenu);
+        clickMoreMenu();
         shouldBeVisible(elements.logOut);
     }
 
     public void clickSettings() {
+        waitFor(Timeout.MILLIS_2000);
         click(elements.settings);
     }
 
     public void clickMoreMenu() {
+        waitFor(Timeout.MILLIS_2000);
         click(elements.moreMenu);
     }
 
