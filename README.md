@@ -1,5 +1,5 @@
 
-# Automation Task Solution
+# Cucumber Automation Sample
 
 ## Prerequisites
 
